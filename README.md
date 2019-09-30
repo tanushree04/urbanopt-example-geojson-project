@@ -7,7 +7,7 @@ It combines a set of URBANopt modules to implement a district-scale energy analy
 workflow. Each of these modules is developed and managed in separate source code repositories. The different modules used in the URBANopt Example Project workflow include: 
 
 - [URBANopt GeoJSON Gem](https://github.com/urbanopt/urbanopt-geojson-gem) module has
-  functionality to tranlsate the GeoJSON Features to OpenStudio Models for simulation.
+  functionality to translate the GeoJSON Features to OpenStudio Models for simulation.
 
 - [URBANopt Scenario Gem](https://github.com/urbanopt/urbanopt-scenario-gem) module
   allows the user to specify, run and compare multiple district-scale energy scenarios. 
