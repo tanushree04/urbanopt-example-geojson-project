@@ -2,9 +2,11 @@
 
 ## Overview
 
-This repository contains an URBANopt Example Project to demonstrate its basic principles.
+This repository contains an URBANopt Example GeoJSON Project to demonstrate its basic principles.
 It combines a set of URBANopt modules to implement a district-scale energy analysis
-workflow. Each of these modules is developed and managed in separate source code repositories. The different modules used in the URBANopt Example Project workflow include: 
+workflow. Each of these modules is developed and managed in separate source code
+repositories. The different modules used in the URBANopt Example GeoJSON Project workflow
+include:
 
 - [URBANopt GeoJSON Gem](https://github.com/urbanopt/urbanopt-geojson-gem) module has
   functionality to translate the GeoJSON Features to OpenStudio Models for simulation.
@@ -16,5 +18,4 @@ workflow. Each of these modules is developed and managed in separate source code
   [OpenStudio Standards Gem](https://github.com/NREL/openstudio-standards) modules are
   part of the OpenStudio SDK.
   
-The usage and implementation of the project is described in the [Developer Documentation
-for Example Project](https://github.com/urbanopt/urbanopt.github.io). 
+The usage and implementation of the project is described in the [Developer Documentation](https://urbanopt.github.io).
