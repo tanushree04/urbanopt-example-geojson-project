@@ -55,6 +55,8 @@ else
   gem 'urbanopt-geojson', '0.1.0'
 end
 
+gem 'ladybug-energy-model-measure', path: '../../IN2_gitrepos/energy-model-measure'
+
 gem 'openstudio-standards', '0.2.10' # doesn't work in 0.2.8?
 
 # simplecov has an unneccesary dependency on native json gem, use fork that does not require this
