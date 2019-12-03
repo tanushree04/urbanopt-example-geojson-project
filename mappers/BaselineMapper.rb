@@ -67,17 +67,38 @@ module URBANopt
       
       def create_osw(scenario, features, feature_names)
 
-        ladybug_json_file_path = File.join(File.dirname(__FILE__), '../ladybug_json/model_multi_zone_office.json') 
-               
-        # create osm for desired json file 
-        OpenStudio::Extension.set_measure_argument(osw, 'LadybugEnergyModelMeasure', 'ladybug_json', ladybug_json_file_path)
+        if features.size != 1
+          raise "TestMapper1 currently cannot simulate more than one feature"
+        end
+        feature = features[0]
+        feature_id = feature.id
+        feature_type = feature.type 
+        feature_name = feature.name
+        if feature_names.size == 1
+          feature_name = feature_names[0]
+        end          
+
+        # deep clone of @@osw before we configure it
+        osw = Marshal.load(Marshal.dump(@@osw))
         
-        # call create typical building only add detailed hvac
-        OpenStudio::Extension.set_measure_argument(osw, 'create_typical_building_from_model', 'add_hvac', true)
-        
+        # now we have the feature, we can look up its properties and set arguments in the OSW
+        osw[:name] = feature_name
+        osw[:description] = feature_name
+        if feature_type == 'Building'
+                    
+          ladybug_json_file_path = File.join(File.dirname(__FILE__), '../ladybug_json/model_multi_zone_office.json') 
+                
+          # create osm for desired json file 
+          OpenStudio::Extension.set_measure_argument(osw, 'LadybugEnergyModelMeasure', 'ladybug_json', ladybug_json_file_path)
+          
+          puts "2HELLO"
+
+          # call create typical building only add detailed hvac
+          #OpenStudio::Extension.set_measure_argument(osw, 'create_typical_building_from_model', 'add_hvac', true)
+        end
         return osw
       end
       
-    end
-  end
-end
+    end #BaselineMapper
+  end #Scenario
+end #URBANopt
