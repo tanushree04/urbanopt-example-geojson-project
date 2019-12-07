@@ -58,6 +58,8 @@ module URBANopt
             # add any paths local to the project
             @@osw[:file_paths] << File.join(File.dirname(__FILE__), '../weather/')
             
+            @@osw[:measure_paths] << File.join(File.dirname(__FILE__), '../custom_measures/ladybug_energy_model_measure/')
+
             # configures OSW with extension gem paths for measures and files, all extension gems must be 
             # required before this
             @@osw = OpenStudio::Extension.configure_osw(@@osw)
