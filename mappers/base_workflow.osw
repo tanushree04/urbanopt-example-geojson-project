@@ -19,7 +19,7 @@
         "climate_zone": "6A"
       }
     },{
-      "measure_dir_name": "LadybugEnergyModelMeasure",
+      "measure_dir_name": "ladybug_energy_model_measure",
       "arguments": {
         "ladybug_json": "model_multi_zone_office.json"   
       }   
@@ -40,6 +40,13 @@
       "arguments": {
         "__SKIP__": true,
         "lighting_power_reduction_percent": 30
+      }
+    },{
+      "measure_dir_name": "default_feature_reports",
+      "arguments": {
+        "feature_id": null,
+        "feature_name": null,
+        "feature_type": null
       } 
     }
   ],

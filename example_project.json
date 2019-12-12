@@ -6,7 +6,8 @@
 		"properties": {
 		  "id": "1",
 		  "name": "Multi zone office",
-		  "type": "Building"
+		  "type": "Building",
+		  "detailed_model_filename": "model_multi_zone_office.json"
 		}
 	  },
 	  {
@@ -14,7 +15,8 @@
 		"properties": {
 		  "id": "2",
 		  "name": "Multi zone single family",
-		  "type": "Building"
+		  "type": "Building",
+		  "detailed_model_filename": "model_multi_zone_single_family_house.json"
 		}
 	  },
 	  {
@@ -22,7 +24,8 @@
 		"properties": {
 		  "id": "3",
 		  "name": "Single zone house",
-		  "type": "Building"		
+		  "type": "Building",
+		  "detailed_model_filename": "model_single_zone_tiny_house.json"
 		}
 	  },
 	  {
@@ -30,8 +33,9 @@
 		"properties": {
 		  "id": "4",
 		  "name": "Single zone office",
-		  "type": "Building"
+		  "type": "Building",
+		  "detailed_model_filename": "model_single_zone_office_fixed_interval.json"
 		}
 	  }
 	]
-}
+  }

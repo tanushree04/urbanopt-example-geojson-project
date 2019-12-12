@@ -54,12 +54,7 @@ module URBANopt
             File.open(osw_path, 'r') do |file|
               @@osw = JSON.parse(file.read, symbolize_names: true)
             end
-        
-            # add any paths local to the project
-            @@osw[:file_paths] << File.join(File.dirname(__FILE__), '../weather/')
             
-            @@osw[:measure_paths] << File.join(File.dirname(__FILE__), '../custom_measures/ladybug_energy_model_measure/')
-
             # configures OSW with extension gem paths for measures and files, all extension gems must be 
             # required before this
             @@osw = OpenStudio::Extension.configure_osw(@@osw)
@@ -82,19 +77,29 @@ module URBANopt
 
         # deep clone of @@osw before we configure it
         osw = Marshal.load(Marshal.dump(@@osw))
+
+        # add any paths local to the project
+        osw[:file_paths] << File.join(File.dirname(__FILE__), '../weather/')        
         
-        # now we have the feature, we can look up its properties and set arguments in the OSW
+        # now we have the feature, we can look up its properties and set arguments in the
+        # OSW
+        osw[:measure_paths] << File.join(File.dirname(__FILE__), '../custom_measures/')
         osw[:name] = feature_name
         osw[:description] = feature_name
         if feature_type == 'Building'
-                    
-          ladybug_json_file_path = File.join(File.dirname(__FILE__), '../ladybug_json/model_multi_zone_office.json') 
-                
-          # create osm for desired json file 
-          OpenStudio::Extension.set_measure_argument(osw, 'LadybugEnergyModelMeasure', 'ladybug_json', ladybug_json_file_path)
-          
-          puts "2HELLO"
+           
+          feature_json = feature.detailed_model_filename
 
+          ladybug_json_file_path = File.join(File.dirname(__FILE__), "../ladybug_json/#{feature_json}")
+             
+          # create osm for desired json file 
+          OpenStudio::Extension.set_measure_argument(osw, 'ladybug_energy_model_measure', 'ladybug_json', ladybug_json_file_path)
+          
+          # call the default feature reporting measure
+          OpenStudio::Extension.set_measure_argument(osw, 'default_feature_reports', 'feature_id', feature_id)
+          OpenStudio::Extension.set_measure_argument(osw, 'default_feature_reports', 'feature_name', feature_name)
+          OpenStudio::Extension.set_measure_argument(osw, 'default_feature_reports', 'feature_type', feature_type)          
+          
           # call create typical building only add detailed hvac
           #OpenStudio::Extension.set_measure_argument(osw, 'create_typical_building_from_model', 'add_hvac', true)
         end
