@@ -36,23 +36,23 @@
 # see the URL below for information on how to write OpenStudio measures
 # http://nrel.github.io/OpenStudio-user-documentation/reference/measure_writing_guide/
 
-require 'ladybug/energy_model/model'
+require_relative "../../ladybug/energy_model/simulation_parameter"
 
 # start the measure
-class LadybugEnergyModelMeasure < OpenStudio::Measure::ModelMeasure
+class LadybugSimulationParameterMeasure < OpenStudio::Measure::ModelMeasure
   # human readable name
   def name
-    return 'Ladybug Energy Model Measure'
+    return 'Ladybug Simulation Parameter Measure'
   end
 
   # human readable description
   def description
-    return 'Ladybug Energy Model Measure.'
+    return 'Ladybug Simulation Parameter Measure.'
   end
 
   # human readable description of modeling approach
   def modeler_description
-    return 'Ladybug Energy Model Measure.'
+    return 'Ladybug Simulation Parameter Measure.'
   end
 
   # define the arguments that the user will input
@@ -60,9 +60,9 @@ class LadybugEnergyModelMeasure < OpenStudio::Measure::ModelMeasure
     args = OpenStudio::Measure::OSArgumentVector.new
 
     # Make an argument for the ladybug json
-    ladybug_json = OpenStudio::Measure::OSArgument.makeStringArgument('ladybug_json', true)
-    ladybug_json.setDisplayName('Path to Ladybug JSON')
-    args << ladybug_json
+    simulation_parameter_json = OpenStudio::Measure::OSArgument.makeStringArgument('simulation_parameter_json', true)
+    simulation_parameter_json.setDisplayName('Path to Simulation Parameter JSON')
+    args << simulation_parameter_json
 
     return args
   end
@@ -75,25 +75,25 @@ class LadybugEnergyModelMeasure < OpenStudio::Measure::ModelMeasure
       return false
     end
 
-    ladybug_json = runner.getStringArgumentValue('ladybug_json', user_arguments)
+    simulation_parameter_json = runner.getStringArgumentValue('simulation_parameter_json', user_arguments)
 
-    if !File.exist?(ladybug_json)
-      runner.registerError("Cannot find file '#{ladybug_json}'")
+    if !File.exist?(simulation_parameter_json)
+      runner.registerError("Cannot find file '#{simulation_parameter_json}'")
       return false
     end
 
-    ladybug_model = Ladybug::EnergyModel::Model.read_from_disk(ladybug_json)
+    sim_par_object = Ladybug::EnergyModel::SimulationParameter.read_from_disk(simulation_parameter_json)
 
-    if !ladybug_model.valid?
-      # runner.registerError("File '#{ladybug_json}' is not valid")
+    if !sim_par_object.valid?
+      # runner.registerError("File '#{simulation_parameter_json}' is not valid")
       # return false
     end
     STDOUT.flush
-    ladybug_model.to_openstudio_model(model)
+    sim_par_object.to_openstudio_model(model)
     STDOUT.flush
     return true
   end
 end
 
 # register the measure to be used by the application
-LadybugEnergyModelMeasure.new.registerWithApplication
+LadybugSimulationParameterMeasure.new.registerWithApplication

@@ -1,0 +1,86 @@
+
+OS:Version,
+  {081d835a-eb52-484b-81f3-66c65ae56d10}, !- Handle
+  2.8.1;                                  !- Version Identifier
+
+OS:SimulationControl,
+  {2f246d2d-aa07-450f-aabc-a3f1ec94cc83}, !- Handle
+  Yes,                                    !- Do Zone Sizing Calculation
+  Yes,                                    !- Do System Sizing Calculation
+  Yes,                                    !- Do Plant Sizing Calculation
+  Yes,                                    !- Run Simulation for Sizing Periods
+  No,                                     !- Run Simulation for Weather File Run Periods
+  ,                                       !- Loads Convergence Tolerance Value
+  ,                                       !- Temperature Convergence Tolerance Value {deltaC}
+  FullInteriorAndExteriorWithReflections; !- Solar Distribution
+
+OS:ShadowCalculation,
+  {052de318-dc4f-47fb-8e31-b3c87cac20e0}, !- Handle
+  20,                                     !- Calculation Frequency
+  15000;                                  !- Maximum Figures in Shadow Overlap Calculations
+
+OS:Sizing:Parameters,
+  {b8b7d8f2-82ac-4d7f-a691-8a9fe5b9c478}, !- Handle
+  1,                                      !- Heating Sizing Factor
+  1;                                      !- Cooling Sizing Factor
+
+OS:Output:Variable,
+  {7624bb31-74cd-4866-a0b2-06e4fd2a4ad1}, !- Handle
+  Output Variable 1,                      !- Name
+  ,                                       !- Key Value
+  Zone Electric Equipment Electric Energy, !- Variable Name
+  Daily;                                  !- Reporting Frequency
+
+OS:Output:Variable,
+  {de8c9f04-83d5-4285-a35b-ed94188f87d3}, !- Handle
+  Output Variable 2,                      !- Name
+  ,                                       !- Key Value
+  Zone Gas Equipment Gas Energy,          !- Variable Name
+  Daily;                                  !- Reporting Frequency
+
+OS:Output:Variable,
+  {d4abba55-f1f3-4532-9967-4d8a2b6bda32}, !- Handle
+  Output Variable 3,                      !- Name
+  ,                                       !- Key Value
+  Zone Ideal Loads Supply Air Total Cooling Energy, !- Variable Name
+  Daily;                                  !- Reporting Frequency
+
+OS:Output:Variable,
+  {55d6efce-3919-49c5-8192-398d4016a9d4}, !- Handle
+  Output Variable 4,                      !- Name
+  ,                                       !- Key Value
+  Zone Ideal Loads Supply Air Total Heating Energy, !- Variable Name
+  Daily;                                  !- Reporting Frequency
+
+OS:Output:Variable,
+  {e5e4db11-a190-402f-87d5-a70337310791}, !- Handle
+  Output Variable 5,                      !- Name
+  ,                                       !- Key Value
+  Zone Lights Electric Energy,            !- Variable Name
+  Daily;                                  !- Reporting Frequency
+
+OS:Output:Variable,
+  {706f7c0f-d7e8-4327-87f0-f0d9d04a4097}, !- Handle
+  Output Variable 6,                      !- Name
+  ,                                       !- Key Value
+  Zone Ventilation Fan Electric Energy,   !- Variable Name
+  Daily;                                  !- Reporting Frequency
+
+OS:RunPeriod,
+  {a0ac1550-3240-4a4d-b8a2-ee44b14a81c6}, !- Handle
+  Run Period 1,                           !- Name
+  1,                                      !- Begin Month
+  1,                                      !- Begin Day of Month
+  6,                                      !- End Month
+  21,                                     !- End Day of Month
+  ,                                       !- Use Weather File Holidays and Special Days
+  ,                                       !- Use Weather File Daylight Saving Period
+  ,                                       !- Apply Weekend Holiday Rule
+  ,                                       !- Use Weather File Rain Indicators
+  ,                                       !- Use Weather File Snow Indicators
+  ;                                       !- Number of Times Runperiod to be Repeated
+
+OS:Timestep,
+  {2189469d-cbff-43c7-8505-b53355e98aba}, !- Handle
+  4;                                      !- Number of Timesteps per Hour
+

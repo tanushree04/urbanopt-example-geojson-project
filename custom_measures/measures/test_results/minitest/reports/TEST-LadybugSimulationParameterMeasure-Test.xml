@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<test_suites>
+  <testsuite name="LadybugSimulationParameterMeasure_Test" filepath="lib/measures/ladybug_simulation_parameter_measure/tests/ladybug_simulation_parameter_measure_test.rb" skipped="0" failures="0" errors="0" tests="2" assertions="6" time="0.091755">
+    <testcase name="test_simple_simulation_par" lineno="100" classname="LadybugSimulationParameterMeasure_Test" assertions="3" time="0.046874">
+    </testcase>
+    <testcase name="test_detailed_simulation_par" lineno="107" classname="LadybugSimulationParameterMeasure_Test" assertions="3" time="0.044881">
+    </testcase>
+  </testsuite>
+</test_suites>

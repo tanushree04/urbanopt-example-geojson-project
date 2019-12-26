@@ -1,0 +1,32 @@
+<?xml version='1.0'?>
+<checkstyle>
+  <file name='lib/measures/ladybug_energy_model_measure/measure.rb'/>
+  <file name='lib/measures/ladybug_energy_model_measure/tests/ladybug_energy_model_measure_test.rb'>
+    <error line='42' column='6' severity='warning' message='Naming/ClassAndModuleCamelCase: Use CamelCase for classes and modules.' source='com.puppycrawl.tools.checkstyle.Naming/ClassAndModuleCamelCase'/>
+    <error line='44' column='2' severity='warning' message='Metrics/AbcSize: Assignment Branch Condition size for apply_measure_to_model is too high. [59.97/50]' source='com.puppycrawl.tools.checkstyle.Metrics/AbcSize'/>
+    <error line='103' column='4' severity='error' message='Layout/AlignParameters: Align the parameters of a method call if they span more than one line.' source='com.puppycrawl.tools.checkstyle.Layout/AlignParameters'/>
+    <error line='104' column='55' severity='error' message='Layout/SpaceAfterComma: Space missing after comma.' source='com.puppycrawl.tools.checkstyle.Layout/SpaceAfterComma'/>
+    <error line='104' column='59' severity='error' message='Layout/SpaceAfterComma: Space missing after comma.' source='com.puppycrawl.tools.checkstyle.Layout/SpaceAfterComma'/>
+    <error line='110' column='55' severity='error' message='Layout/SpaceAfterComma: Space missing after comma.' source='com.puppycrawl.tools.checkstyle.Layout/SpaceAfterComma'/>
+    <error line='110' column='59' severity='error' message='Layout/SpaceAfterComma: Space missing after comma.' source='com.puppycrawl.tools.checkstyle.Layout/SpaceAfterComma'/>
+    <error line='116' column='55' severity='error' message='Layout/SpaceAfterComma: Space missing after comma.' source='com.puppycrawl.tools.checkstyle.Layout/SpaceAfterComma'/>
+    <error line='116' column='59' severity='error' message='Layout/SpaceAfterComma: Space missing after comma.' source='com.puppycrawl.tools.checkstyle.Layout/SpaceAfterComma'/>
+    <error line='122' column='55' severity='error' message='Layout/SpaceAfterComma: Space missing after comma.' source='com.puppycrawl.tools.checkstyle.Layout/SpaceAfterComma'/>
+    <error line='122' column='59' severity='error' message='Layout/SpaceAfterComma: Space missing after comma.' source='com.puppycrawl.tools.checkstyle.Layout/SpaceAfterComma'/>
+    <error line='128' column='55' severity='error' message='Layout/SpaceAfterComma: Space missing after comma.' source='com.puppycrawl.tools.checkstyle.Layout/SpaceAfterComma'/>
+    <error line='128' column='59' severity='error' message='Layout/SpaceAfterComma: Space missing after comma.' source='com.puppycrawl.tools.checkstyle.Layout/SpaceAfterComma'/>
+    <error line='131' column='0' severity='error' message='Layout/EmptyLines: Extra blank line detected.' source='com.puppycrawl.tools.checkstyle.Layout/EmptyLines'/>
+    <error line='131' column='0' severity='error' message='Layout/EmptyLinesAroundClassBody: Extra empty line detected at class body end.' source='com.puppycrawl.tools.checkstyle.Layout/EmptyLinesAroundClassBody'/>
+  </file>
+  <file name='lib/measures/ladybug_simulation_parameter_measure/measure.rb'/>
+  <file name='lib/measures/ladybug_simulation_parameter_measure/tests/ladybug_simulation_parameter_measure_test.rb'>
+    <error line='42' column='6' severity='warning' message='Naming/ClassAndModuleCamelCase: Use CamelCase for classes and modules.' source='com.puppycrawl.tools.checkstyle.Naming/ClassAndModuleCamelCase'/>
+    <error line='44' column='2' severity='warning' message='Metrics/AbcSize: Assignment Branch Condition size for apply_measure_to_model is too high. [59.97/50]' source='com.puppycrawl.tools.checkstyle.Metrics/AbcSize'/>
+    <error line='103' column='4' severity='error' message='Layout/AlignParameters: Align the parameters of a method call if they span more than one line.' source='com.puppycrawl.tools.checkstyle.Layout/AlignParameters'/>
+    <error line='104' column='55' severity='error' message='Layout/SpaceAfterComma: Space missing after comma.' source='com.puppycrawl.tools.checkstyle.Layout/SpaceAfterComma'/>
+    <error line='104' column='59' severity='error' message='Layout/SpaceAfterComma: Space missing after comma.' source='com.puppycrawl.tools.checkstyle.Layout/SpaceAfterComma'/>
+    <error line='110' column='55' severity='error' message='Layout/SpaceAfterComma: Space missing after comma.' source='com.puppycrawl.tools.checkstyle.Layout/SpaceAfterComma'/>
+    <error line='110' column='59' severity='error' message='Layout/SpaceAfterComma: Space missing after comma.' source='com.puppycrawl.tools.checkstyle.Layout/SpaceAfterComma'/>
+    <error line='112' column='0' severity='error' message='Layout/EmptyLinesAroundClassBody: Extra empty line detected at class body end.' source='com.puppycrawl.tools.checkstyle.Layout/EmptyLinesAroundClassBody'/>
+  </file>
+</checkstyle>

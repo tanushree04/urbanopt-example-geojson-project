@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<test_suites>
+  <testsuite name="LadybugEnergyModelMeasure_Test" filepath="lib/measures/ladybug_energy_model_measure/tests/ladybug_energy_model_measure_test.rb" skipped="0" failures="0" errors="0" tests="5" assertions="15" time="16.453813">
+    <testcase name="test_model_multi_zone_office" lineno="125" classname="LadybugEnergyModelMeasure_Test" assertions="3" time="5.003847">
+    </testcase>
+    <testcase name="test_shoe_box" lineno="113" classname="LadybugEnergyModelMeasure_Test" assertions="3" time="1.153404">
+    </testcase>
+    <testcase name="test_model_multi_zone_single_family_house" lineno="107" classname="LadybugEnergyModelMeasure_Test" assertions="3" time="3.552712">
+    </testcase>
+    <testcase name="test_model_single_zone_office_fixed_interval" lineno="119" classname="LadybugEnergyModelMeasure_Test" assertions="3" time="4.494542">
+    </testcase>
+    <testcase name="test_model_single_zone_house" lineno="100" classname="LadybugEnergyModelMeasure_Test" assertions="3" time="2.249308">
+    </testcase>
+  </testsuite>
+</test_suites>

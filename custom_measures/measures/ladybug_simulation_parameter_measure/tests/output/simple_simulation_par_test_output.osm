@@ -1,0 +1,44 @@
+
+OS:Version,
+  {c49aca62-516d-4dc5-b3ad-e8b6ccbc9edb}, !- Handle
+  2.8.1;                                  !- Version Identifier
+
+OS:SimulationControl,
+  {c56f05fd-9b43-4ec6-b4ed-c1b201e78b45}, !- Handle
+  Yes,                                    !- Do Zone Sizing Calculation
+  Yes,                                    !- Do System Sizing Calculation
+  Yes,                                    !- Do Plant Sizing Calculation
+  No,                                     !- Run Simulation for Sizing Periods
+  Yes,                                    !- Run Simulation for Weather File Run Periods
+  ,                                       !- Loads Convergence Tolerance Value
+  ,                                       !- Temperature Convergence Tolerance Value {deltaC}
+  FullInteriorAndExteriorWithReflections; !- Solar Distribution
+
+OS:ShadowCalculation,
+  {55ac13ce-d127-4f37-b16b-359c31554697}, !- Handle
+  30,                                     !- Calculation Frequency
+  15000;                                  !- Maximum Figures in Shadow Overlap Calculations
+
+OS:Sizing:Parameters,
+  {4818130f-8872-4725-b8f5-f0ab464ea44d}, !- Handle
+  1.25,                                   !- Heating Sizing Factor
+  1.15;                                   !- Cooling Sizing Factor
+
+OS:RunPeriod,
+  {7260bc15-b93d-4a87-9c78-c75d936f2020}, !- Handle
+  Run Period 1,                           !- Name
+  1,                                      !- Begin Month
+  1,                                      !- Begin Day of Month
+  12,                                     !- End Month
+  31,                                     !- End Day of Month
+  ,                                       !- Use Weather File Holidays and Special Days
+  ,                                       !- Use Weather File Daylight Saving Period
+  ,                                       !- Apply Weekend Holiday Rule
+  ,                                       !- Use Weather File Rain Indicators
+  ,                                       !- Use Weather File Snow Indicators
+  ;                                       !- Number of Times Runperiod to be Repeated
+
+OS:Timestep,
+  {994b9313-e12a-4ccd-a8c0-1d2ea49c78a3}, !- Handle
+  6;                                      !- Number of Timesteps per Hour
+

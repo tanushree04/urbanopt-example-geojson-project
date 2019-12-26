@@ -55,9 +55,7 @@ end
 #  gem 'urbanopt-geojson', '0.1.0'
 #end
 
-gem 'urbanopt-geojson', path: '../urbanopt-geojson-gem'
-
-gem 'ladybug-energy-model-measure', path: '../../IN2_gitrepose/energy-model-measure'
+gem 'urbanopt-geojson', github: 'URBANopt/urbanopt-geojson-gem', branch: 'building_schema_modification'
 
 gem 'openstudio-standards', '0.2.10' # doesn't work in 0.2.8?
 

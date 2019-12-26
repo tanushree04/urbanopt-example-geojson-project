@@ -1,0 +1,148 @@
+{
+  "repo_name": "energy-model-measure",
+  "current_branch": "master",
+  "sha": "7527a2f325b298aabab9a3be6a87e9aca26b6bd0",
+  "openstudio_style": {
+    "by_measure": {
+      "LadybugEnergyModelMeasure": {
+        "measure_info": 0,
+        "measure_warnings": 0,
+        "measure_errors": 0,
+        "issues": [
+
+        ]
+      }
+    },
+    "total_info": 0,
+    "total_warnings": 0,
+    "total_errors": 0
+  },
+  "rubocop": {
+    "total_measures": 2,
+    "total_files": 4,
+    "total_issues": 23,
+    "total_info": 0,
+    "total_warnings": 4,
+    "total_errors": 19,
+    "by_measure": {
+      "": {
+        "measure_issues": 8,
+        "measure_info": 0,
+        "measure_warnings": 2,
+        "measure_errors": 6,
+        "files": [
+          {
+            "file_name": "measure.rb",
+            "violations": [
+
+            ],
+            "issues": 0,
+            "info": 0,
+            "warning": 0,
+            "error": 0
+          },
+          {
+            "file_name": "ladybug_simulation_parameter_measure_test.rb",
+            "violations": [
+              {
+                "line": "42",
+                "column": "6",
+                "severity": "warning",
+                "message": "Naming/ClassAndModuleCamelCase: Use CamelCase for classes and modules."
+              },
+              {
+                "line": "44",
+                "column": "2",
+                "severity": "warning",
+                "message": "Metrics/AbcSize: Assignment Branch Condition size for apply_measure_to_model is too high. [59.97/50]"
+              },
+              {
+                "line": "103",
+                "column": "4",
+                "severity": "error",
+                "message": "Layout/AlignParameters: Align the parameters of a method call if they span more than one line."
+              },
+              {
+                "line": "104",
+                "column": "55",
+                "severity": "error",
+                "message": "Layout/SpaceAfterComma: Space missing after comma."
+              },
+              {
+                "line": "104",
+                "column": "59",
+                "severity": "error",
+                "message": "Layout/SpaceAfterComma: Space missing after comma."
+              },
+              {
+                "line": "110",
+                "column": "55",
+                "severity": "error",
+                "message": "Layout/SpaceAfterComma: Space missing after comma."
+              },
+              {
+                "line": "110",
+                "column": "59",
+                "severity": "error",
+                "message": "Layout/SpaceAfterComma: Space missing after comma."
+              },
+              {
+                "line": "112",
+                "column": "0",
+                "severity": "error",
+                "message": "Layout/EmptyLinesAroundClassBody: Extra empty line detected at class body end."
+              }
+            ],
+            "issues": 8,
+            "info": 0,
+            "warning": 2,
+            "error": 6
+          }
+        ]
+      }
+    }
+  },
+  "minitest": {
+    "test_directory": "C:/IN2_gitrepose/energy-model-measure/lib/measures/test_results/minitest",
+    "total_tests": 5,
+    "total_assertions": 15,
+    "total_errors": 0,
+    "total_failures": 0,
+    "total_skipped": 0,
+    "total_compatibility_errors": 0,
+    "total_loaded": true,
+    "total_load_errors": [
+
+    ],
+    "by_measure": {
+      "LadybugEnergyModelMeasure": {
+        "tested_class": "LadybugEnergyModelMeasure",
+        "openstudio_version": "2.8.1",
+        "measure_min_version": "2.0.0",
+        "measure_max_version": "None",
+        "loaded": true,
+        "load_errors": [
+
+        ],
+        "measure_compatibility_errors": 0,
+        "measure_tests": 5,
+        "measure_assertions": 15,
+        "measure_errors": 0,
+        "measure_failures": 0,
+        "measure_skipped": 0,
+        "issues": {
+          "errors": [
+
+          ],
+          "failures": [
+
+          ],
+          "skipped": [
+
+          ],
+          "compatibility_error": 0
+        }
+      }
+    }
+  }
+}

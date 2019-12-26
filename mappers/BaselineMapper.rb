@@ -83,7 +83,7 @@ module URBANopt
         
         # now we have the feature, we can look up its properties and set arguments in the
         # OSW
-        osw[:measure_paths] << File.join(File.dirname(__FILE__), '../custom_measures/')
+        osw[:measure_paths] << File.join(File.dirname(__FILE__), '../custom_measures/measures')
         osw[:name] = feature_name
         osw[:description] = feature_name
         if feature_type == 'Building'
